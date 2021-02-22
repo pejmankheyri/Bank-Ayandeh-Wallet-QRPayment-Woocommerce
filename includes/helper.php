@@ -52,7 +52,12 @@ function QRcode($response_qrCodeValue, $order_id)
 {
   $qr_code_file_path = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'qrcode' . DIRECTORY_SEPARATOR . 'qr_assets' . DIRECTORY_SEPARATOR;
 
-  $QR_name = $order_id.'_'.time() . '.png';
+  // If directory is not created, create a new directory 
+  if (!file_exists($qr_code_file_path)) {
+    mkdir($qr_code_file_path);
+  }
+
+  $QR_name = $order_id . '_' . time() . '.png';
   $filename  =  $qr_code_file_path . $QR_name;
 
   $qrCodeValue  =  $response_qrCodeValue;
