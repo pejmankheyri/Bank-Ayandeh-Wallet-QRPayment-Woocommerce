@@ -20,8 +20,8 @@ class QRPayment extends WC_Payment_Gateway
     $this->author = 'pejman kheyri';
 
     $this->id = 'QRPayment';
-    $this->method_title = __('کیف پول', 'woocommerce');
-    $this->method_description = __('تنظیمات پرداخت توسط کیف پول برای افزونه فروشگاه ساز ووکامرس', 'woocommerce');
+    $this->method_title = __('کیف پول بانک آینده', 'woocommerce');
+    $this->method_description = __('تنظیمات پرداخت توسط کیف پول بانک آینده برای افزونه فروشگاه ساز ووکامرس', 'woocommerce');
     $this->icon = apply_filters('WC_QRPayment_logo', WP_PLUGIN_URL . "/" . plugin_basename(dirname(__FILE__)) . '/assets/images/logo.png');
     $this->has_fields = false;
 
@@ -42,8 +42,8 @@ class QRPayment extends WC_Payment_Gateway
       add_action('woocommerce_update_options_payment_gateways_' . $this->id, array($this, 'process_admin_options'));
     else
       add_action('woocommerce_update_options_payment_gateways', array($this, 'process_admin_options'));
-      add_action('woocommerce_receipt_' . $this->id . '', array($this, 'Check_QRPayment_gateway_status'));
-      add_action('woocommerce_api_' . strtolower(get_class($this)) . '', array($this, 'Return_from_QRPayment_gateway'));
+    add_action('woocommerce_receipt_' . $this->id . '', array($this, 'Check_QRPayment_gateway_status'));
+    add_action('woocommerce_api_' . strtolower(get_class($this)) . '', array($this, 'Return_from_QRPayment_gateway'));
   }
 
   public function init_form_fields()
@@ -60,8 +60,8 @@ class QRPayment extends WC_Payment_Gateway
         'enabled' => array(
           'title' => __('فعالسازی/غیرفعالسازی', 'woocommerce'),
           'type' => 'checkbox',
-          'label' => __('فعالسازی درگاه کیف پول', 'woocommerce'),
-          'description' => __('برای فعالسازی درگاه پرداخت کیف پول باید چک باکس را تیک بزنید', 'woocommerce'),
+          'label' => __('فعالسازی درگاه کیف پول بانک آینده', 'woocommerce'),
+          'description' => __('برای فعالسازی درگاه پرداخت کیف پول بانک آینده باید چک باکس را تیک بزنید', 'woocommerce'),
           'default' => 'yes',
           'desc_tip' => true,
         ),
@@ -69,7 +69,7 @@ class QRPayment extends WC_Payment_Gateway
           'title' => __('عنوان درگاه', 'woocommerce'),
           'type' => 'text',
           'description' => __('عنوان درگاه که در طی خرید به مشتری نمایش داده میشود', 'woocommerce'),
-          'default' => __('کیف پول', 'woocommerce'),
+          'default' => __('کیف پول بانک آینده', 'woocommerce'),
           'desc_tip' => true,
         ),
         'description' => array(
@@ -77,7 +77,7 @@ class QRPayment extends WC_Payment_Gateway
           'type' => 'text',
           'desc_tip' => true,
           'description' => __('توضیحاتی که در طی عملیات پرداخت برای درگاه نمایش داده خواهد شد', 'woocommerce'),
-          'default' => __('پرداخت توسط کیف پول شما', 'woocommerce')
+          'default' => __('پرداخت توسط کیف پول بانک آینده شما', 'woocommerce')
         ),
         'TerminalNumber' => array(
           'title' => __('کد ترمینال', 'woocommerce'),
@@ -205,16 +205,16 @@ class QRPayment extends WC_Payment_Gateway
           $response_token = $response->token;
           $response_qrCodeValue = $response->qrCodeValue;
         } else {
-          wc_add_notice(__('خطا در هنگام اتصال به سرور کیف پول .', 'woocommerce'), 'error');
-          wp_redirect( wc_get_checkout_url() );
+          wc_add_notice(__('خطا در هنگام اتصال به سرور کیف پول بانک آینده .', 'woocommerce'), 'error');
+          wp_redirect(wc_get_checkout_url());
           exit;
         }
       } catch (\Throwable $th) {
 
-        $Note = sprintf(__('خطا در هنگام اتصال به سرور کیف پول : %s', 'woocommerce'), $response_result);
+        $Note = sprintf(__('خطا در هنگام اتصال به سرور کیف پول بانک آینده : %s', 'woocommerce'), $response_result);
         $Note = apply_filters('WC_QRPayment_Send_to_Gateway_Failed_Note', $Note, $order_id);
         $order->add_order_note($Note);
-        $Notice = sprintf(__('در هنگام اتصال به سرور کیف پول خطای زیر رخ داده است : <br/>%s', 'woocommerce'), $response_description);
+        $Notice = sprintf(__('در هنگام اتصال به سرور کیف پول بانک آینده خطای زیر رخ داده است : <br/>%s', 'woocommerce'), $response_description);
         $Notice = apply_filters('WC_QRPayment_Send_to_Gateway_Failed_Notice', $Notice, $order_id);
         if ($Notice) {
           wc_add_notice($Notice, 'error');
@@ -229,28 +229,28 @@ class QRPayment extends WC_Payment_Gateway
 
         $QR_name = QRcode($response_qrCodeValue, $order_id);
 
-        echo '<li class="qrcode-description-start"> ابتدا بارکد زیر را توسط نرم افزار کیف پول موبایلتان اسکن و پرداخت نمایید. </li>';
+        echo '<li class="qrcode-description-start"> ابتدا بارکد زیر را توسط نرم افزار کیف پول بانک آینده موبایلتان اسکن و پرداخت نمایید. </li>';
         echo '<li class="qrcode"> <img src="' . plugin_dir_url(dirname(__FILE__)) . 'includes/qrcode/qr_assets/' . $QR_name . '"> </li>';
-        echo '<li class="qrcode-description-end"> سپس روی پیگیری پرداخت کلیک نمایید تا بررسی پرداخت انجام شود. </li>';
+        echo '<li class="qrcode-description-end"> در صورت پرداخت سفارش، نمایش بارکد حذف و پیغام موفقیت آمیز بودن سفارش نمایش داده می شود. </li>';
         echo "<li class='token'> کد پیگیری : " . $response_token . " </li>";
       } else {
-        wc_add_notice(__('خطا در ایجاد QR کد کیف پول .', 'woocommerce'), 'error');
+        wc_add_notice(__('خطا در ایجاد QR کد کیف پول بانک آینده .', 'woocommerce'), 'error');
       }
     }
     $action = $this->author;
     do_action('WC_Gateway_Payment_Actions', $action);
 
-    $form = '<form action="" method="POST" class="QRPayment-checkout-form" id="QRPayment-checkout-form">';
-    if (!$QRPayment_generate && !$QRPayment_inquiry) {
+    $form = '<form action="" method="POST" name="QRPayment-checkout-form" class="QRPayment-checkout-form" id="QRPayment-checkout-form">';
+    if (!$QRPayment_generate && !$QRPayment_inquiry_token) {
       $form .= ' <input type="submit" name="QRPayment_generate" class="button alt" id="QRPayment-generate-button" value="' . __('ایجاد بارکد جهت پرداخت', 'woocommerce') . '"/> ';
     }
 
-    if ($QRPayment_inquiry) {
+    if ($QRPayment_inquiry || $QRPayment_inquiry_token) {
 
       if ($QRPayment_inquiry_QR_name) {
-        echo '<li class="qrcode-description-start"> ابتدا بارکد زیر را توسط نرم افزار کیف پول موبایلتان اسکن و پرداخت نمایید. </li>';
+        echo '<li class="qrcode-description-start"> ابتدا بارکد زیر را توسط نرم افزار کیف پول بانک آینده موبایلتان اسکن و پرداخت نمایید. </li>';
         echo '<li class="qrcode"> <img src="' . plugin_dir_url(dirname(__FILE__)) . 'includes/qrcode/qr_assets/' . $QRPayment_inquiry_QR_name . '"> </li>';
-        echo '<li class="qrcode-description-end"> سپس روی پیگیری پرداخت کلیک نمایید تا بررسی پرداخت انجام شود. </li>';
+        echo '<li class="qrcode-description-end"> در صورت پرداخت سفارش، نمایش بارکد حذف و پیغام موفقیت آمیز بودن سفارش نمایش داده می شود. </li>';
       }
 
       if ($QRPayment_inquiry_token) {
@@ -291,16 +291,16 @@ class QRPayment extends WC_Payment_Gateway
         echo "<li class='result-token'> کد پیگیری : " . $QRPayment_inquiry_token . " </li>";
         echo "<li class='result-date'> تاریخ پیگیری : " . $result->doTime . " </li>";
       } else {
-        wc_add_notice(__('خطا در دریافت اطلاعات پرداخت از سرور کیف پول .', 'woocommerce'), 'error');
+        wc_add_notice(__('خطا در دریافت اطلاعات پرداخت از سرور کیف پول بانک آینده .', 'woocommerce'), 'error');
       }
     }
 
-    if ($QRPayment_generate || $QRPayment_inquiry) {
+    if ($QRPayment_generate || $QRPayment_inquiry || $QRPayment_inquiry_token) {
       if ($QRPayment_generate) {
         $hidden_QR_name = $QR_name;
         $hidden_response_token = $response_token;
       }
-      if ($QRPayment_inquiry) {
+      if ($QRPayment_inquiry || $QRPayment_inquiry_token) {
         $hidden_QR_name = $QRPayment_inquiry_QR_name;
         $hidden_response_token = $QRPayment_inquiry_token;
       }
@@ -308,7 +308,11 @@ class QRPayment extends WC_Payment_Gateway
       $form .= ' <input type="hidden" name="QRPayment_inquiry_token" id="QRPayment_inquiry_token" value="' . $hidden_response_token . '"/> ';
 
       if ($successfully_paid === false) {
-        $form .= ' <input type="submit" name="QRPayment_inquiry" class="button alt" id="QRPayment-payment-button" value="' . __('پیگیری پرداخت', 'woocommerce') . '"/> ';
+
+        $form .= "<script type='text/javascript'>
+            setInterval(function(){ document.forms['QRPayment-checkout-form'].submit(); }, 10000);
+          </script>";
+        $form .= ' <input style="display: none;" type="submit" name="QRPayment_inquiry" class="button alt" id="QRPayment-payment-button" value="' . __('پیگیری پرداخت', 'woocommerce') . '"/> ';
       }
     }
 

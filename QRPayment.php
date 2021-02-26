@@ -14,9 +14,9 @@
  */
 
 /*
-Plugin Name: پرداخت با کیف پول افزونه ووکامرس
+Plugin Name: پرداخت با کیف پول بانک آینده افزونه ووکامرس
 Version: 1.0.0
-Description:  پرداخت با کیف پول افزونه ووکامرس
+Description:  پرداخت با کیف پول بانک آینده افزونه ووکامرس
 Author: pejmankheyri@gmail.com
 Contributors: pejmankheyri
 WC requires at least: 3.0.0
