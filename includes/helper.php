@@ -14,7 +14,7 @@
  */
 
 
-function QRGenerate_call($TerminalNumber, $SerialNumber, $Amount, $durationTime, $key)
+function QRGenerate_call($TerminalNumber, $SerialNumber, $Amount, $durationTime, $CallbackURL, $key)
 {
   $url = 'https://qrpayment.efarda.ir/api/';
 
@@ -22,7 +22,7 @@ function QRGenerate_call($TerminalNumber, $SerialNumber, $Amount, $durationTime,
     'terminalNumber' => $TerminalNumber,
     'serialNumber' => $SerialNumber,
     'amount' => $Amount,
-    'callBackUrl' => '',
+    'callBackUrl' => $CallbackURL,
     'Type' => '1',
     'durationTime' => $durationTime ? $durationTime : 10,
   );

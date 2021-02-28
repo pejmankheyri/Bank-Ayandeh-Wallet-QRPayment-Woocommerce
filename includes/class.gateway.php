@@ -13,7 +13,7 @@
  * @version   1.0.0
  */
 
-class QRPayment extends WC_Payment_Gateway
+class WC_Gateway_QRPayment extends WC_Payment_Gateway
 {
   public function __construct()
   {
@@ -205,7 +205,7 @@ class QRPayment extends WC_Payment_Gateway
     if ($QRPayment_generate) {
       try {
 
-        $response = QRGenerate_call($this->TerminalNumber, $this->SerialNumber, $Amount, $this->durationTime, $this->key);
+        $response = QRGenerate_call($this->TerminalNumber, $this->SerialNumber, $Amount, $this->durationTime, $CallbackURL, $this->key);
 
         if ($response) {
           $response_result = $response->result;
@@ -366,6 +366,113 @@ class QRPayment extends WC_Payment_Gateway
 
   public function Return_from_QRPayment_gateway()
   {
-    //
+    global $woocommerce;
+
+    $call_back_result = $_POST['result'];
+    // $amount = $_POST['amount'];
+    // $mobile = $_POST['mobile'];
+    $token = $_POST['token'];
+
+    $action = $this->author;
+    do_action('WC_Gateway_Payment_Actions', $action);
+    if (isset($_GET['wc_order']))
+      $order_id = $_GET['wc_order'];
+    else
+      $order_id = $woocommerce->session->order_id_QRPayment;
+
+    if ($order_id) {
+
+      $order = new WC_Order($order_id);
+
+      if ($token) {
+        $result = [];
+        $result = QRIncuiry_call($token, $this->key);
+
+        if ($result) {
+          if ($result->result === "0") {
+            update_post_meta($order_id, '_transaction_id', $token);
+
+            $order->payment_complete($token);
+            $woocommerce->cart->empty_cart();
+
+            $Note_success = sprintf(__('پرداخت از طریق لینک بازگشتی سرور کیف پول بانک آینده موفقیت آمیز بود .<br/> کد پیگیری: %s', 'woocommerce'), $token);
+            $Note_success = apply_filters('WC_QRPayment_Return_from_Gateway_Success_Note', $Note_success, $order_id, $token);
+            if ($Note_success)
+              $order->add_order_note($Note_success, 1);
+
+            $Notice_success = wpautop(wptexturize($this->success_massage));
+            $Notice_success = str_replace("{transaction_id}", $token, $Notice_success);
+            $Notice_success = apply_filters('WC_QRPayment_Return_from_Gateway_Success_Notice', $Notice_success, $order_id, $token);
+            if ($Notice_success)
+              wc_add_notice($Notice_success, 'success');
+
+            do_action('WC_QRPayment_Return_from_Gateway_Success', $order_id, $token);
+
+            wp_redirect(add_query_arg('wc_status', 'success', $this->get_return_url($order)));
+            exit;
+          } else {
+
+            $tr_id = '<br/>کد پیگیری : ' . $token;
+
+            $Note_failed = sprintf(__('پرداخت شما انجام نشده است : <br> کد خطا : %s <br> %s', 'woocommerce'), $result->result, $tr_id);
+            $Note_failed = apply_filters('WC_QRPayment_Return_from_Gateway_Failed_Note', $Note_failed, $order_id, $result->result, $token);
+            if ($Note_failed)
+              $order->add_order_note($Note_failed, 1);
+
+            $Notice_failed = wpautop(wptexturize($this->failed_massage));
+            $Notice_failed = str_replace("{transaction_id}", $token, $Notice_failed);
+            $Notice_failed = str_replace("{fault}", $result->result, $Notice_failed);
+            $Notice_failed = apply_filters('WC_QRPayment_Return_from_Gateway_Failed_Notice', $Notice_failed, $order_id, $result->result, $token);
+            if ($Notice_failed)
+              wc_add_notice($Notice_failed, 'error');
+
+            do_action('WC_QRPayment_Return_from_Gateway_Failed', $order_id, $result->result, $token);
+
+            wp_redirect(wc_get_checkout_url());
+            exit;
+          }
+        } else {
+          $action = $this->author;
+          do_action('WC_Gateway_Payment_Actions', $action);
+
+          $Note = sprintf(__('خطا در هنگام دریافت اطلاعات پرداخت با فراخوانی لینک بازگشت از سرور کیف پول بانک آینده ', 'woocommerce'));
+          $Note = apply_filters('WC_QRPayment_Return_from_Gateway_Failed_Note', $Note, $order_id);
+          if ($Note)
+            $order->add_order_note($Note, 1);
+
+          $Notice = wpautop(wptexturize($this->failed_massage));
+          $Notice = apply_filters('WC_QRPayment_Return_from_Gateway_Failed_Notice', $Notice, $order_id);
+          if ($Notice)
+            wc_add_notice($Notice, 'error');
+
+          do_action('WC_QRPayment_Return_from_Gateway_Failed', $order_id);
+
+          wp_redirect(wc_get_checkout_url());
+          exit;
+        }
+      } else {
+
+        $action = $this->author;
+        do_action('WC_Gateway_Payment_Actions', $action);
+
+        $tr_id = ($call_back_result && $call_back_result != 0) ? ('<br/>کد خطا : ' . $call_back_result) : '';
+
+        $Note = sprintf(__('خطا در هنگام دریافت توکن با فراخوانی لینک بازگشت از سرور کیف پول بانک آینده : %s', 'woocommerce'), $tr_id);
+        $Note = apply_filters('WC_QRPayment_Return_from_Gateway_Failed_Note', $Note, $order_id, $call_back_result);
+        if ($Note)
+          $order->add_order_note($Note, 1);
+
+        $Notice = wpautop(wptexturize($this->failed_massage));
+        $Notice = str_replace("{fault}", $call_back_result, $Notice);
+        $Notice = apply_filters('WC_QRPayment_Return_from_Gateway_Failed_Notice', $Notice, $order_id, $call_back_result);
+        if ($Notice)
+          wc_add_notice($Notice, 'error');
+
+        do_action('WC_QRPayment_Return_from_Gateway_Failed', $order_id, $call_back_result);
+
+        wp_redirect(wc_get_checkout_url());
+        exit;
+      }
+    }
   }
 }
