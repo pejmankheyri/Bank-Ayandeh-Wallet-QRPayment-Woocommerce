@@ -31,9 +31,10 @@ class QRPayment extends WC_Payment_Gateway
     $this->title = $this->settings['title'];
     $this->description = $this->settings['description'];
 
+    $this->key = $this->settings['key'];
     $this->TerminalNumber = $this->settings['TerminalNumber'];
     $this->SerialNumber = $this->settings['SerialNumber'];
-    $this->key = $this->settings['key'];
+    $this->durationTime = $this->settings['durationTime'];
 
     $this->success_massage = $this->settings['success_massage'];
     $this->failed_massage = $this->settings['failed_massage'];
@@ -79,6 +80,13 @@ class QRPayment extends WC_Payment_Gateway
           'description' => __('توضیحاتی که در طی عملیات پرداخت برای درگاه نمایش داده خواهد شد', 'woocommerce'),
           'default' => __('پرداخت توسط کیف پول بانک آینده شما', 'woocommerce')
         ),
+        'key' => array(
+          'title' => __('کلید', 'woocommerce'),
+          'type' => 'text',
+          'description' => __('کلید', 'woocommerce'),
+          'default' => '',
+          'desc_tip' => true
+        ),
         'TerminalNumber' => array(
           'title' => __('کد ترمینال', 'woocommerce'),
           'type' => 'text',
@@ -93,11 +101,11 @@ class QRPayment extends WC_Payment_Gateway
           'default' => '',
           'desc_tip' => true
         ),
-        'key' => array(
-          'title' => __('کلید', 'woocommerce'),
+        'durationTime' => array(
+          'title' => __('زمان انقضا', 'woocommerce'),
           'type' => 'text',
-          'description' => __('کلید', 'woocommerce'),
-          'default' => '',
+          'description' => __('زمان انقضا به صورت دقیقه، که درصورت خالی بودن 10 دقیقه خواهد بود', 'woocommerce'),
+          'default' => 10,
           'desc_tip' => true
         ),
         'payment_confing' => array(
@@ -197,7 +205,7 @@ class QRPayment extends WC_Payment_Gateway
     if ($QRPayment_generate) {
       try {
 
-        $response = QRGenerate_call($this->TerminalNumber, $this->SerialNumber, $Amount, $this->key);
+        $response = QRGenerate_call($this->TerminalNumber, $this->SerialNumber, $Amount, $this->durationTime, $this->key);
 
         if ($response) {
           $response_result = $response->result;
