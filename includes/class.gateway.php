@@ -13,7 +13,7 @@
  * @version   1.0.0
  */
 
-class WC_Gateway_QRPayment extends WC_Payment_Gateway
+class QRPayment extends WC_Payment_Gateway
 {
   public function __construct()
   {
@@ -186,7 +186,7 @@ class WC_Gateway_QRPayment extends WC_Payment_Gateway
     $Description = apply_filters('WC_QRPayment_Description', $Description, $order_id);
     do_action('WC_QRPayment_Gateway_Payment', $order_id, $Description);
 
-    $CallbackURL = add_query_arg('wc_order', $order_id, WC()->api_request_url('WC_Gateway_QRPayment'));
+    $CallbackURL = add_query_arg('wc_order', $order_id, WC()->api_request_url('QRPayment'));
 
     if (!extension_loaded('curl')) {
       $order->add_order_note(__('تابع cURL روی هاست شما فعال نیست .', 'woocommerce'));
@@ -455,7 +455,7 @@ class WC_Gateway_QRPayment extends WC_Payment_Gateway
         $action = $this->author;
         do_action('WC_Gateway_Payment_Actions', $action);
 
-        $tr_id = ($call_back_result && $call_back_result != 0) ? ('<br/>کد خطا : ' . $call_back_result) : '';
+        $tr_id = '<br/>کد خطا : ' . $call_back_result;
 
         $Note = sprintf(__('خطا در هنگام دریافت توکن با فراخوانی لینک بازگشت از سرور کیف پول بانک آینده : %s', 'woocommerce'), $tr_id);
         $Note = apply_filters('WC_QRPayment_Return_from_Gateway_Failed_Note', $Note, $order_id, $call_back_result);

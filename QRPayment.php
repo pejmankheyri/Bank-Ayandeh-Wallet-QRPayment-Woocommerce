@@ -41,12 +41,12 @@ if (!defined('WOO_QRPayment_PLUGIN_LIB_PATH'))
  */
 function woocommerce_QRPayment()
 {
-    if (class_exists('WC_Payment_Gateway') && !class_exists('WC_Gateway_QRPayment') && !function_exists('Woocommerce_Add_QRPayment_Gateway')) {
+    if (class_exists('WC_Payment_Gateway') && !class_exists('QRPayment') && !function_exists('Woocommerce_Add_QRPayment_Gateway')) {
 
         add_filter('woocommerce_payment_gateways', 'Woocommerce_Add_QRPayment_Gateway');
         function Woocommerce_Add_QRPayment_Gateway($methods)
         {
-            $methods[] = 'WC_Gateway_QRPayment';
+            $methods[] = 'QRPayment';
             return $methods;
         }
 
