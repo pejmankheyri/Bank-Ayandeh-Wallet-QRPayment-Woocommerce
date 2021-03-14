@@ -368,10 +368,10 @@ class QRPayment extends WC_Payment_Gateway
   {
     global $woocommerce;
 
-    $call_back_result = $_POST['result'];
-    // $amount = $_POST['amount'];
-    // $mobile = $_POST['mobile'];
-    $token = $_POST['token'];
+    $callback_res = json_decode(file_get_contents('php://input'), true);
+
+    $call_back_result = $callback_res['result'];
+    $token = $callback_res['token'];
 
     $action = $this->author;
     do_action('WC_Gateway_Payment_Actions', $action);
