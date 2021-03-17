@@ -83,4 +83,4 @@
 
 
 ## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce?ref=badge_small)
