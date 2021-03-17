@@ -9,12 +9,12 @@
  * @package   Wordpress
  * @author    Pejman Kheyri <pejmankheyri@gmail.com>
  * @copyright 2021 All rights reserved.
- * @version   1.0.0
+ * @version   1.0.1
  */
 
 /*
 Plugin Name: پرداخت با کیف پول بانک آینده افزونه ووکامرس
-Version: 1.0.0
+Version: 1.0.1
 Description:  پرداخت با کیف پول بانک آینده افزونه ووکامرس
 Author: pejmankheyri@gmail.com
 Contributors: pejmankheyri
@@ -25,7 +25,7 @@ WC tested up to: 5.0.0
 if (!defined('ABSPATH')) exit;
 
 if (!defined('WOO_QRPayment_VERSION'))
-    define('WOO_QRPayment_VERSION', '1.0.0');
+    define('WOO_QRPayment_VERSION', '1.0.1');
 
 if (!defined('WOO_QRPayment_PLUGIN_PATH'))
     define('WOO_QRPayment_PLUGIN_PATH', plugins_url('', __FILE__));
