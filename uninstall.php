@@ -9,7 +9,7 @@
  * @package   Wordpress
  * @author    Pejman Kheyri <pejmankheyri@gmail.com>
  * @copyright 2021 All rights reserved.
- * @license   MIT
+ * @license   GPL3
  * @version   1.0.0
  */
 
