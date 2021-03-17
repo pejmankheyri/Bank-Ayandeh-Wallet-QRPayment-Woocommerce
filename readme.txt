@@ -20,6 +20,6 @@ Tested up to: 5.6.1
 
 
 == Installation ==
-1. Upload `QRPayment` folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Complete Woocommerce QRPayment Settings
+1. پوشه QRPayment را در مسیر /wp-content/plugins/ کپی کنید
+2. افزونه را از طریق منوی افزونه ها در وردپرس فعال کنید
+3. تنظیمات افزونه را در بخش پرداخت های ووکامرس انجام دهید
