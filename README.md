@@ -6,6 +6,7 @@
 <a href="https://packagist.org/packages/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce"><img src="https://img.shields.io/packagist/dt/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce"><img src="https://img.shields.io/packagist/v/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce"><img src="https://img.shields.io/github/license/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce" alt="License"></a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce.svg?type=shield"/></a>
 </p>
 
 <div dir="rtl">
@@ -79,3 +80,7 @@
 [MIT](https://choosealicense.com/licenses/mit/)
 
 </div>
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce?ref=badge_large)
