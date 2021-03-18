@@ -17,6 +17,20 @@
 
 مشتریان شما هنگام خرید گزینه پرداخت با کیف پول بانک آینده را انتخاب می کنند و سپس پرداخت انجام می شود.
 
+> [نصب با آپلود فایل](https://github.com/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce#%D9%86%D8%B5%D8%A8-%D8%A8%D8%A7-%D8%A2%D9%BE%D9%84%D9%88%D8%AF-%D9%81%D8%A7%DB%8C%D9%84)
+> 
+> [نصب از منوی افزونه ها](https://github.com/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce#%D9%86%D8%B5%D8%A8-%D8%A7%D8%B2-%D9%85%D9%86%D9%88%DB%8C-%D8%A7%D9%81%D8%B2%D9%88%D9%86%D9%87-%D9%87%D8%A7)
+> 
+> [امکانات](https://github.com/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce#%D8%A7%D9%85%DA%A9%D8%A7%D9%86%D8%A7%D8%AA)
+> 
+> [تنظیمات](https://github.com/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA)
+> 
+> [کمک به توسعه](https://github.com/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce#%DA%A9%D9%85%DA%A9-%D8%A8%D9%87-%D8%AA%D9%88%D8%B3%D8%B9%D9%87)
+> 
+> [لایسنس](https://github.com/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce#%D9%84%D8%A7%DB%8C%D8%B3%D9%86%D8%B3)
+> 
+> [تصاویر افزونه](https://github.com/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce#%DA%A9%D9%85%DA%A9-%D8%A8%D9%87-%D8%AA%D9%88%D8%B3%D8%B9%D9%87)
+
 ## نصب با آپلود فایل
 
 * پوشه `QRPayment` را در مسیر `/wp-content/plugins/` کپی کنید.
@@ -73,5 +87,30 @@
 ## لایسنس
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce?ref=badge_small)
+
+</div>
+
+<div dir="rtl">
+
+## تصاویر افزونه
+
+* ![01](https://user-images.githubusercontent.com/3329008/111613124-6ff40d80-87f3-11eb-9c27-a033ea1886b8.png)
+
+* ![02](https://user-images.githubusercontent.com/3329008/111613161-77b3b200-87f3-11eb-9d62-ce595ae4cf21.png)
+
+* ![03](https://user-images.githubusercontent.com/3329008/111613226-87cb9180-87f3-11eb-9e0e-ef6c454c8701.png)
+
+* ![04](https://user-images.githubusercontent.com/3329008/111613259-90bc6300-87f3-11eb-8664-66b69b467ea8.png)
+
+* ![05](https://user-images.githubusercontent.com/3329008/111613292-97e37100-87f3-11eb-8e3c-37fb94007913.png)
+
+* ![06](https://user-images.githubusercontent.com/3329008/111613315-9fa31580-87f3-11eb-99cf-5af9441809cd.png)
+
+* ![07](https://user-images.githubusercontent.com/3329008/111613344-a893e700-87f3-11eb-8776-9b0cb6954315.png)
+
+* ![08](https://user-images.githubusercontent.com/3329008/111613372-afbaf500-87f3-11eb-8da8-42cca2718fa0.png)
+
+* ![09](https://user-images.githubusercontent.com/3329008/111614726-299fae00-87f5-11eb-88bc-d5cdadbd2fd8.png)
+
 
 </div>
