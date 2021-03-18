@@ -6,6 +6,7 @@ author EMAIL: pejmankheyri@gmail.com
 Tags: woocommerce, commerce, e-commerce, commerce, shop, virtual shop, payment,woocommerce persian, e-commerce, ووکامرس, ووکامرس فارسی,woocommerce payment
 Requires at least: 4.0
 Tested up to: 5.6.1
+License: MIT
 
 درگاه پرداخت توسط کیف پول بانک آینده در سیستم فروشگاه ساز ووکامرس
 
