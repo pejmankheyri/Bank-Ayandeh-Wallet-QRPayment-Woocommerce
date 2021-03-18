@@ -29,7 +29,7 @@
 > 
 > [لایسنس](https://github.com/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce#%D9%84%D8%A7%DB%8C%D8%B3%D9%86%D8%B3)
 > 
-> [تصاویر افزونه](https://github.com/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce#%DA%A9%D9%85%DA%A9-%D8%A8%D9%87-%D8%AA%D9%88%D8%B3%D8%B9%D9%87)
+> [تصاویر افزونه](https://github.com/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce#%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1-%D8%A7%D9%81%D8%B2%D9%88%D9%86%D9%87)
 
 ## نصب با آپلود فایل
 
