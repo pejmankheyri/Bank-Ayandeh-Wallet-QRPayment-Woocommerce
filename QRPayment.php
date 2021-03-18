@@ -9,13 +9,12 @@
  * @package   Wordpress
  * @author    Pejman Kheyri <pejmankheyri@gmail.com>
  * @copyright 2021 All rights reserved.
- * @version   1.0.5
  */
 
 /*
-Plugin Name: Bank Ayandeh Wallet QRPayment Woocommerce
-Version: 1.0.5
-Description: Bank Ayandeh Wallet QRPayment Woocommerce
+Plugin Name: Bank Ayandeh Wallet QRPayment
+Version: 1.0.6
+Description: Bank Ayandeh Wallet QRPayment
 Author: pejmankheyri@gmail.com
 Contributors: pejmankheyri
 WC requires at least: 3.0.0
@@ -25,7 +24,7 @@ WC tested up to: 5.0.0
 if (!defined('ABSPATH')) exit;
 
 if (!defined('WOO_QRPayment_VERSION'))
-    define('WOO_QRPayment_VERSION', '1.0.5');
+    define('WOO_QRPayment_VERSION', '1.0.6');
 
 if (!defined('WOO_QRPayment_PLUGIN_PATH'))
     define('WOO_QRPayment_PLUGIN_PATH', plugins_url('', __FILE__));

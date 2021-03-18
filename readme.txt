@@ -1,5 +1,5 @@
-=== Woocommerce QRPayment ===
-Version: 1.0.5 
+=== Bank Ayandeh Wallet QRPayment ===
+Version: 1.0.6
 author: pejmankheyri@gmail.com
 Contributors: pejmankheyri
 author EMAIL: pejmankheyri@gmail.com
