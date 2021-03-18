@@ -2,9 +2,9 @@
 <img src="https://play-lh.googleusercontent.com/3eRxtWMCBbxTe5bxIcNWB4emRduRafLFXCGz4hlZT1P5RrKqP8V6pf5UAItFaZPkDw=s180" />
 </p>
 <p align="center">
-<a href="https://travis-ci.org/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce"><img src="https://travis-ci.org/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce.svg" alt="Build Status"></a>
+  <a href="https://packagist.org/packages/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce"><img src="https://poser.pugx.org/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce/v/stable" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce"><img src="https://img.shields.io/packagist/dt/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce"><img src="https://img.shields.io/packagist/v/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce" alt="Latest Stable Version"></a>
+  <a href="https://packagist.org/packages/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce"><img src="https://poser.pugx.org/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce/d/monthly" alt="Monthly Downloads"></a>
 <a href="https://packagist.org/packages/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce"><img src="https://img.shields.io/github/license/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce" alt="License"></a>
 <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpejmankheyri%2FBank-Ayandeh-Wallet-QRPayment-Woocommerce.svg?type=shield"/></a>
 </p>
