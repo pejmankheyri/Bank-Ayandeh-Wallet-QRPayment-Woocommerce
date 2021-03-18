@@ -9,7 +9,7 @@
  * @package   Wordpress
  * @author    Pejman Kheyri <pejmankheyri@gmail.com>
  * @copyright 2021 All rights reserved.
- * @version   1.0.1
+ * @version   1.0.5
  */
 
 class QRPayment extends WC_Payment_Gateway
