@@ -1,5 +1,6 @@
 <p align="center">
-<img src="https://play-lh.googleusercontent.com/3eRxtWMCBbxTe5bxIcNWB4emRduRafLFXCGz4hlZT1P5RrKqP8V6pf5UAItFaZPkDw=s180" />
+<img src="https://user-images.githubusercontent.com/3329008/111814350-9bf4b900-88ef-11eb-86c6-0461eaf54203.png" /> + 
+<img src="https://user-images.githubusercontent.com/3329008/111814402-a8791180-88ef-11eb-8c68-79cc872bc9fb.png" />
 </p>
 <p align="center">
   <a href="https://packagist.org/packages/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce"><img src="https://poser.pugx.org/pejmankheyri/bank-ayandeh-wallet-qrpayment-woocommerce/v/stable" alt="Total Downloads"></a>
@@ -50,9 +51,9 @@
 
 ## امکانات
 
-* بخش تنظیمات برای مدیریت بهتر پلاگین از دید کاربر
+* بخش تنظیمات برای مدیریت بهتر افزونه از دید کاربر
 * نمایش اخطار های (Notice) متناسب با فعالیت کاربر هنگام پرداخت با کیف پول در بخش کاربری فروشگاه ووکامرس
-* نمایش و ثبت تمامی یادداشت های (Note) ایجاد شده در پلاگین در صفحه سفارشات بخش یادداشت های ووکامرس
+* نمایش و ثبت تمامی یادداشت های (Note) ایجاد شده در افزونه در صفحه سفارشات بخش یادداشت های ووکامرس
 * سازگار با انواع واحد پولی های `ریال`، `تومان`،‌ `هزار ریال` و `هزار تومان`
 * مدیریت خودکار پرداخت و وضعیت سفارش کاربر هنگام بازگشت از درگاه (Callback) بانک آینده هنگام موفق بودن پرداخت کاربر
 * قابلیت افزودن شورت کد های `{transaction_id}` (کد پیگیری) و  `{fault}` (کد خطا) در بخش پیام های پرداخت موفق و ناموفق
@@ -62,7 +63,7 @@
 * وارد بخش `پیکربندی` در منوی ووکامرس شوید.
 * تب `پرداخت ها` را در بالای صفحه انتخاب نمایید.
 * کیف پول بانک آینده را پیدا کنید و روی قسمت `مدیریت` کلیک کنید.
-* تنظیمات پلاگین را انجام دهید:
+* تنظیمات افزونه را انجام دهید:
 
     | تنظیمات | توضیح |
     | ------ | ------ |
@@ -94,23 +95,14 @@
 
 ## تصاویر افزونه
 
-* ![01](https://user-images.githubusercontent.com/3329008/111613124-6ff40d80-87f3-11eb-9c27-a033ea1886b8.png)
-
-* ![02](https://user-images.githubusercontent.com/3329008/111613161-77b3b200-87f3-11eb-9d62-ce595ae4cf21.png)
-
-* ![03](https://user-images.githubusercontent.com/3329008/111613226-87cb9180-87f3-11eb-9e0e-ef6c454c8701.png)
-
-* ![04](https://user-images.githubusercontent.com/3329008/111613259-90bc6300-87f3-11eb-8664-66b69b467ea8.png)
-
-* ![05](https://user-images.githubusercontent.com/3329008/111613292-97e37100-87f3-11eb-8e3c-37fb94007913.png)
-
-* ![06](https://user-images.githubusercontent.com/3329008/111613315-9fa31580-87f3-11eb-99cf-5af9441809cd.png)
-
-* ![07](https://user-images.githubusercontent.com/3329008/111613344-a893e700-87f3-11eb-8776-9b0cb6954315.png)
-
-* ![08](https://user-images.githubusercontent.com/3329008/111613372-afbaf500-87f3-11eb-8da8-42cca2718fa0.png)
-
-* ![09](https://user-images.githubusercontent.com/3329008/111614726-299fae00-87f5-11eb-88bc-d5cdadbd2fd8.png)
-
+* <a href="https://user-images.githubusercontent.com/3329008/111613124-6ff40d80-87f3-11eb-9c27-a033ea1886b8.png" target="_blank">تصویر 01</a>
+* <a href="https://user-images.githubusercontent.com/3329008/111613161-77b3b200-87f3-11eb-9d62-ce595ae4cf21.png" target="_blank">تصویر 02</a>
+* <a href="https://user-images.githubusercontent.com/3329008/111613226-87cb9180-87f3-11eb-9e0e-ef6c454c8701.png" target="_blank">تصویر 03</a>
+* <a href="https://user-images.githubusercontent.com/3329008/111613259-90bc6300-87f3-11eb-8664-66b69b467ea8.png" target="_blank">تصویر 04</a>
+* <a href="https://user-images.githubusercontent.com/3329008/111613292-97e37100-87f3-11eb-8e3c-37fb94007913.png" target="_blank">تصویر 05</a>
+* <a href="https://user-images.githubusercontent.com/3329008/111613315-9fa31580-87f3-11eb-99cf-5af9441809cd.png" target="_blank">تصویر 06</a>
+* <a href="https://user-images.githubusercontent.com/3329008/111613344-a893e700-87f3-11eb-8776-9b0cb6954315.png" target="_blank">تصویر 07</a>
+* <a href="https://user-images.githubusercontent.com/3329008/111613372-afbaf500-87f3-11eb-8da8-42cca2718fa0.png" target="_blank">تصویر 08</a>
+* <a href="https://user-images.githubusercontent.com/3329008/111614726-299fae00-87f5-11eb-88bc-d5cdadbd2fd8.png" target="_blank">تصویر 09</a>
 
 </div>
