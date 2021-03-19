@@ -1,5 +1,5 @@
 === Wallet QRPayment for Bank Ayandeh ===
-Version: 1.0.7
+Version: 1.0.8
 author: pejmankheyri@gmail.com
 Contributors: pejmankheyri
 author EMAIL: pejmankheyri@gmail.com
