@@ -13,7 +13,7 @@
 
 /*
 Plugin Name: Wallet QRPayment for Bank Ayandeh
-Version: 1.0.8
+Version: 1.0.9
 Description: Wallet QRPayment for Bank Ayandeh
 Author: pejmankheyri@gmail.com
 Contributors: pejmankheyri
@@ -24,7 +24,7 @@ WC tested up to: 5.0.0
 if (!defined('ABSPATH')) exit;
 
 if (!defined('WOO_QRPayment_VERSION'))
-    define('WOO_QRPayment_VERSION', '1.0.8');
+    define('WOO_QRPayment_VERSION', '1.0.9');
 
 if (!defined('WOO_QRPayment_PLUGIN_PATH'))
     define('WOO_QRPayment_PLUGIN_PATH', plugins_url('', __FILE__));
