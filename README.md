@@ -34,7 +34,7 @@
 
 ## نصب با آپلود فایل
 
-* پوشه `QRPayment` را در مسیر `/wp-content/plugins/` کپی کنید.
+* پوشه `Bank-Ayandeh-Wallet-QRPayment-Woocommerce` را در مسیر `/wp-content/plugins/` کپی کنید.
 * افزونه را از طریق منوی `افزونه ها` در وردپرس فعال کنید.
 * [تنظیمات افزونه را در بخش `پرداخت ها`ی ووکامرس انجام دهید.](https://github.com/pejmankheyri/Bank-Ayandeh-Wallet-QRPayment-Woocommerce#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA)
 
