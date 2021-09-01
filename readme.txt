@@ -1,5 +1,5 @@
 === Wallet QRPayment for Bank Ayandeh ===
-Version: 1.0.10
+Version: 1.1.0
 author: pejmankheyri@gmail.com
 Contributors: pejmankheyri
 author EMAIL: pejmankheyri@gmail.com
@@ -20,3 +20,6 @@ License: MIT
 1. پوشه Bank-Ayandeh-Wallet-QRPayment-Woocommerce را در مسیر /wp-content/plugins/ کپی کنید
 2. افزونه را از طریق منوی افزونه ها در وردپرس فعال کنید
 3. تنظیمات افزونه را در بخش پرداخت های ووکامرس انجام دهید
+
+== Changes ==
+* در این نسخه پشتیبانی از موبایل برای پرداخت های کیف پول افزوده شده است.
