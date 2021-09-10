@@ -238,7 +238,7 @@ class QRPayment extends WC_Payment_Gateway
         $QR_name = QRcode($response_qrCodeValue, $order_id);
 
         echo '<li class="qrcode-description-start"> ابتدا بارکد زیر را توسط نرم افزار کیف پول بانک آینده موبایلتان اسکن و پرداخت نمایید. </li>';
-        echo '<li class="qrcode"> <img src="' . plugin_dir_url(dirname(__FILE__)) . 'includes/qrcode/qr_assets/' . $QR_name . '"> <a href="' . $response_deepLink . '"><img src="' . plugin_dir_url(dirname(__FILE__)) . 'includes/assets/images/logo.png"></a> </li>';
+        echo '<li class="qrcode"> <img src="' . plugin_dir_url(dirname(__FILE__)) . 'includes/qrcode/qr_assets/' . $QR_name . '"> <a href="' . $response_deepLink . '"><img src="' . plugin_dir_url(dirname(__FILE__)) . 'includes/assets/images/QRMob.png"></a> </li>';
         echo '<li class="qrcode-description-end"> در صورت پرداخت سفارش، نمایش بارکد حذف و پیغام موفقیت آمیز بودن سفارش نمایش داده می شود. </li>';
         echo "<li class='token'> کد پیگیری : " . $response_token . " </li>";
       } else {
@@ -257,7 +257,7 @@ class QRPayment extends WC_Payment_Gateway
 
       if ($QRPayment_inquiry_QR_name) {
         echo '<li class="qrcode-description-start"> ابتدا بارکد زیر را توسط نرم افزار کیف پول بانک آینده موبایلتان اسکن و پرداخت نمایید. </li>';
-        echo '<li class="qrcode"> <img src="' . plugin_dir_url(dirname(__FILE__)) . 'includes/qrcode/qr_assets/' . $QRPayment_inquiry_QR_name . '"> <a href="' . $QRPayment_inquiry_deepLink . '"><img src="' . plugin_dir_url(dirname(__FILE__)) . 'includes/assets/images/logo.png"></a> </li>';
+        echo '<li class="qrcode"> <img src="' . plugin_dir_url(dirname(__FILE__)) . 'includes/qrcode/qr_assets/' . $QRPayment_inquiry_QR_name . '"> <a href="' . $QRPayment_inquiry_deepLink . '"><img src="' . plugin_dir_url(dirname(__FILE__)) . 'includes/assets/images/QRMob.png"></a> </li>';
         echo '<li class="qrcode-description-end"> در صورت پرداخت سفارش، نمایش بارکد حذف و پیغام موفقیت آمیز بودن سفارش نمایش داده می شود. </li>';
       }
 
